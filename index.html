@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修仙之路</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div class="game-header">
+            <div id="stats-panel">
+                <div class="stat">修为: <span id="power">0</span></div>
+                <div class="stat">神识: <span id="spirit">0</span></div>
+                <div class="stat">体魄: <span id="strength">0</span></div>
+                <div class="stat">境界: <span id="level">凡人</span></div>
+            </div>
+            
+            <div id="inventory-panel">
+                <div class="item">灵石: <span id="lingshi">0</span></div>
+                <div class="item">灵草: <span id="lingcao">0</span></div>
+                <div class="item">法器: <span id="faqi">0</span></div>
+                <div class="item">丹药: <span id="danyao">0</span></div>
+            </div>
+        </div>
+
+        <div id="story-panel">
+            <div id="story-image" class="fade-in">
+                <div class="image-loading hidden">加载中...</div>
+            </div>
+            <div id="story-text"></div>
+            <div id="choices"></div>
+        </div>
+
+        <div id="bag-panel" class="hidden">
+            <div class="bag-header">
+                <h3>背包</h3>
+                <button id="close-bag">关闭</button>
+            </div>
+            <div class="bag-content"></div>
+        </div>
+
+        <div id="battle-panel" class="hidden">
+            <div class="battle-header">
+                <div class="player-status">
+                    <div class="name">你</div>
+                    <div class="battle-stats">
+                        <div class="hp">生命: <span id="player-hp">100</span></div>
+                        <div class="mp">法力: <span id="player-mp">100</span></div>
+                        <div class="power">修为: <span id="player-power">0</span></div>
+                    </div>
+                </div>
+                <div class="enemy-status">
+                    <div class="name"><span id="enemy-name">妖兽</span></div>
+                    <div class="battle-stats">
+                        <div class="hp">生命: <span id="enemy-hp">100</span></div>
+                        <div class="attack">攻击: <span id="enemy-attack">10</span></div>
+                    </div>
+                </div>
+            </div>
+            <div id="battle-image"></div>
+            <div class="battle-content">
+                <div id="battle-log"></div>
+                <div class="battle-actions">
+                    <button id="normal-attack">普通攻击</button>
+                    <button id="skill-attack">法术攻击</button>
+                    <button id="use-item">使用道具</button>
+                    <button id="escape">逃跑</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-story-panel" class="hidden">
+            <div class="story-header">
+                <div class="story-title"></div>
+            </div>
+            <div id="main-story-image" class="fade-in"></div>
+            <div id="main-story-text"></div>
+            <div id="main-story-choices"></div>
+        </div>
+
+        <div id="actions-panel">
+            <button id="meditate">打坐</button>
+            <button id="practice">习武</button>
+            <button id="gather">采药</button>
+            <button id="explore">寻宝</button>
+            <button id="open-bag">背包</button>
+            <button id="reset-game" class="danger">重置游戏</button>
+        </div>
+    </div>
+
+    <script src="story.js"></script>
+    <script src="game.js"></script>
+</body>
+</html> 
